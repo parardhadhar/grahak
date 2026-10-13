@@ -2,6 +2,8 @@
 
 **A portfolio project by Parardha Dhar.** Grahak brings customer conversations, contact context, AI summaries, and follow-ups into one workspace for small businesses.
 
+**Live early access:** [grahak-flame.vercel.app](https://grahak-flame.vercel.app). Requests open an email draft; visitors send it to submit their request. The full CRM is shown in a separate demo workspace and requires hosted backend/database/bridge services before public account onboarding.
+
 > **Hiring / collaboration:** [parardhadhar@gmail.com](mailto:parardhadhar@gmail.com)
 > This repository is a technical showcase. It includes the application and API source; it does not include live credentials, customer data, or a paired WhatsApp account.
 

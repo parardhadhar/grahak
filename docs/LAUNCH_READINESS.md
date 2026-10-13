@@ -70,7 +70,11 @@ Backend tests are isolated from live customer databases and external AI. Bridge 
 
 ## Remaining deployment work
 
-This is running locally, not deployed. Public launch still requires hosted frontend/backend/bridge processes, HTTPS, environment variables on the host, persistent session/outbox storage, database backups, and a final test on the deployed domain. Set `DEV_MODE=false` and a strong `SECRET_KEY` before public launch; configure `FRONTEND_URL` and the public frontend API URL.
+The marketing site and early-access request page are deployed at https://grahak-flame.vercel.app. Vercel uses the `frontend` project root and `NEXT_PUBLIC_LAUNCH_MODE=early-access`; account and CRM routes redirect to the request page. The page opens a draft addressed to parardhadhar@gmail.com, and the visitor must send it. The website does not store these requests.
+
+The full CRM backend and WhatsApp bridge remain local. Public account onboarding still requires hosted backend/bridge processes, persistent session/outbox storage, database backups, and a final integration test on the deployed domain. Set `DEV_MODE=false` and a strong `SECRET_KEY` before hosting the backend; configure `FRONTEND_URL` and `API_INTERNAL_URL` on the frontend host. Disable early-access mode only when those services are verified. The starter proposal is up to 10 customer chats; no billing/quota enforcement is enabled by this marketing deployment.
+
+Frontend runtime dependencies were patched to Next.js 16.3.8. The production-only dependency audit reports zero vulnerabilities. Remaining development-tool advisories require separate review; no breaking downgrade was applied.
 
 The companion bridge supports one configured WhatsApp account/workspace per process. Serving multiple businesses requires separate bridge instances or an additional account-session architecture. Meta Cloud API remains an alternative transport with explicit business mapping and signature verification.
 
