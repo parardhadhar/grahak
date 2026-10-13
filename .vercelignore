@@ -1,0 +1,11 @@
+*
+!frontend
+!frontend/**
+frontend/node_modules/**
+frontend/.next/**
+frontend/.next-preview/**
+frontend/.next-demo/**
+frontend/.env*
+frontend/.vercel/**
+frontend/*.log
+frontend/*.tsbuildinfo

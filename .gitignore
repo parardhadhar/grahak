@@ -28,6 +28,8 @@ test_grahak.db
 node_modules/
 .next/
 .next-preview/
+.next-demo/
+videos/
 .vercel/
 .npm
 *.tgz
@@ -52,3 +54,4 @@ whatsapp-bridge/pending-messages.json*
 # Secrets
 *.pem
 *.key
+.vercel
